@@ -260,7 +260,7 @@ export default function HealthBenefits() {
                     <div className="hb-card-right">
                         <div className={`hb-outcomes-visual ${card3Visible ? 'hb-outcomes-visible' : ''}`}>
                             <img
-                                src="https://images.unsplash.com/photo-1609501676725-7186f017a4b7?w=500&h=400&fit=crop"
+                                src="./card3.jpg"
                                 alt="family health"
                                 className="hb-outcomes-img"
                             />

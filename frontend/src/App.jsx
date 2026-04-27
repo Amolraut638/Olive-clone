@@ -23,7 +23,7 @@ function App() {
         <HowItWorks />
       </div>
 
-      <div style={{ marginTop: '60px', marginLeft: '-16px', marginRight: '-16px' }}>
+      <div style={{ marginTop: '60px', marginLeft: '-20px', marginRight: '-20px' }}>
         <HealthBenefits />
       </div>
 

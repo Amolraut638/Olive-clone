@@ -67,8 +67,8 @@
   margin-top: -120px;
   position: relative;
   z-index: 2;
-  padding: 0 80px; /* ← increase padding to reduce width */
-  max-width: 1100px; /* ← limit max width */
+  padding: 0 100px; 
+  max-width: 1100px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -332,7 +332,7 @@
   justify-content: center;
   opacity: 0;
   transform: translateY(24px);
-  transition: opacity 0.8s ease, transform 0.8s ease;
+  transition: opacity 0.1s ease, transform 0.1s ease;
 }
 
 .hb-outcomes-visible {
@@ -390,7 +390,7 @@
   }
 
   .hb-cards {
-    padding: 0 16px;
+    padding: 0 20px;
     margin-top: -80px;
   }
 
