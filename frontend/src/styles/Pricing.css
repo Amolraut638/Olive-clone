@@ -1,0 +1,230 @@
+/* ── SECTION ── */
+.pr-section {
+  background: transparent;
+  padding: 80px 48px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* ── BLOB ── */
+.pr-blob {
+  position: absolute;
+  right: -60px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 340px;
+  height: 340px;
+  background: #deebd8;
+  opacity: 0.7;
+  border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  z-index: 0;
+}
+
+/* ── TITLE ── */
+.pr-title {
+  font-size: clamp(2.4rem, 5vw, 3.8rem);
+  font-weight: 500;
+  color: #1a2e0f;
+  line-height: 1.1;
+  letter-spacing: -1.5px;
+  text-align: center;
+  margin-bottom: 48px;
+  position: relative;
+  z-index: 1;
+}
+
+/* ── CARDS GRID ── */
+.pr-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  width: 100%;
+  max-width: 900px;
+  position: relative;
+  z-index: 1;
+  align-items: center;
+}
+
+/* ── CARD BASE ── */
+.pr-card {
+  border: 1px solid #e4e8e0;
+  border-radius: 20px;
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+.pr-card:hover {
+  transform: translateY(-4px);
+}
+
+/* Light card */
+.pr-card-light {
+  background: #f0f5ee;
+  border-color: #d6e4cc;
+}
+
+/* Dark card */
+.pr-card-dark {
+  background: #2d4a1e;
+  border-color: #2d4a1e;
+}
+
+/* ── PLAN NAME ── */
+.pr-plan-name {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #1a2e0f;
+  margin-top: 0;
+  margin-bottom: 4px;
+}
+
+.pr-plan-name-white {
+  color: #ffffff;
+}
+
+/* ── PRICE ROW ── */
+.pr-price-row {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+  margin-top: 8px;
+  margin-bottom: 24px;
+}
+
+.pr-price {
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: #1a2e0f;
+  letter-spacing: -1px;
+  line-height: 1;
+}
+
+.pr-price-white {
+  color: #ffffff;
+}
+
+.pr-price-orig {
+  font-size: 1rem;
+  font-weight: 500;
+  color: rgba(255,255,255,0.45);
+  text-decoration: line-through;
+}
+
+.pr-period {
+  font-size: 0.82rem;
+  color: #888;
+}
+
+.pr-period-white {
+  color: rgba(255,255,255,0.55);
+}
+
+/* ── FEATURES ── */
+.pr-features {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 28px;
+  width: 100%;
+}
+
+.pr-feature {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.875rem;
+  color: #555;
+}
+
+.pr-feature-white {
+  color: #ffffff;
+}
+
+.pr-check-light {
+  color: #4a6741;
+  flex-shrink: 0;
+}
+
+.pr-check-white {
+  color: #ffffff;
+  flex-shrink: 0;
+}
+
+/* ── BUTTON ── */
+.pr-btn {
+  width: 100%;
+  padding: 14px 16px;
+  border-radius: 9999px;
+  font-size: 0.92rem;
+  font-weight: 700;
+  cursor: pointer;
+  border: none;
+  transition: background 0.2s ease;
+  margin-top: 4px;
+}
+
+.pr-btn-dark {
+  background: #2a3d1a;
+  color: #ffffff;
+}
+
+.pr-btn-dark:hover {
+  background: #3a5528;
+}
+
+.pr-btn-white {
+  background: #ffffff;
+  color: #1a2e0f;
+}
+
+.pr-btn-white:hover {
+  background: #f0f5ee;
+}
+
+/* ══════════════════════════════
+   RESPONSIVE
+══════════════════════════════ */
+@media (max-width: 768px) {
+  .pr-section {
+    padding: 60px 20px;
+  }
+
+  .pr-cards {
+    grid-template-columns: 1fr;
+    max-width: 480px;
+    gap: 20px;
+  }
+
+  .pr-blob {
+    width: 200px;
+    height: 200px;
+    right: -30px;
+    top: 15%;
+  }
+
+  .pr-title {
+    font-size: clamp(2rem, 7vw, 2.8rem);
+  }
+}
+
+@media (max-width: 480px) {
+  .pr-section {
+    padding: 48px 16px;
+  }
+
+  .pr-card {
+    padding: 24px 20px;
+  }
+
+  .pr-price {
+    font-size: 2.2rem;
+  }
+}

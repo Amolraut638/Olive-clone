@@ -1,0 +1,316 @@
+/* ── SECTION ── */
+.t-section {
+  background: transparent;
+  padding: 80px 48px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* ── BLOBS ── */
+.t-blob {
+  position: absolute;
+  background: #e2ede0;
+  opacity: 0.7;
+  z-index: 0;
+}
+
+.t-blob-left {
+  width: 280px;
+  height: 340px;
+  left: -80px;
+  top: 80px;
+  border-radius: 60% 40% 50% 50%;
+}
+
+.t-blob-bottom {
+  width: 200px;
+  height: 200px;
+  left: 20px;
+  bottom: 40px;
+  border-radius: 50%;
+}
+
+/* ── INNER LAYOUT ── */
+.t-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+/* ── LEFT ── */
+.t-left {
+  position: relative;
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+.t-photo-wrap {
+  width: 100%;
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+}
+
+.t-main-photo {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  display: block;
+  filter: grayscale(60%);
+  border-radius: 20px;
+}
+
+/* ── REVIEW CARDS ── */
+.t-card {
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 22px 24px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.07);
+  position: relative;
+}
+
+.t-card-text {
+  font-size: 0.88rem;
+  color: #333;
+  line-height: 1.7;
+  margin-bottom: 12px;
+}
+
+.t-card-name {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #1a2e0f;
+  margin-bottom: 4px;
+}
+
+.star-row {
+  display: flex;
+  gap: 3px;
+}
+
+/* Top card */
+.t-card-top {
+  position: absolute;
+  top: 0px;
+  left: 50%;
+  width: 320px;
+  z-index: 3;
+}
+
+.t-card-avatar {
+  position: absolute;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid white;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+}
+
+.t-avatar-tr {
+  top: -16px;
+  right: -16px;
+}
+
+.t-avatar-br {
+  bottom: -16px;
+  right: 40px;
+}
+
+/* Bottom card */
+.t-card-bottom {
+  position: absolute;
+  bottom: 0px;
+  left: 10px;
+  width: 340px;
+  z-index: 3;
+}
+
+/* Mid card */
+.t-card-mid {
+  margin-top: 24px;
+  width: 100%;
+}
+
+.t-card-footer {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 14px;
+}
+
+.t-footer-avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+  border: 2px solid #eee;
+}
+
+/* ── RIGHT ── */
+.t-right {
+  padding-left: 24px;
+}
+
+.t-title {
+  font-size: clamp(2.4rem, 4.5vw, 3.6rem);
+  font-weight: 500;
+  color: #1a2e0f;
+  line-height: 1.1;
+  letter-spacing: -1.5px;
+  margin-bottom: 20px;
+}
+
+.t-read-all {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: #1a2e0f;
+  text-decoration: none;
+  margin-bottom: 8px;
+  transition: gap 0.2s ease;
+}
+
+.t-read-all:hover {
+  gap: 10px;
+}
+
+/* ══════════════════════════════
+   RESPONSIVE — TABLET
+══════════════════════════════ */
+@media (max-width: 1024px) {
+  .t-section {
+    padding: 60px 32px;
+  }
+
+  .t-card-top {
+    left: 42%;
+    width: 260px;
+  }
+
+  .t-card-bottom {
+    width: 280px;
+  }
+}
+
+/* ══════════════════════════════
+   RESPONSIVE — MOBILE
+══════════════════════════════ */
+@media (max-width: 768px) {
+  .t-section {
+    padding: 48px 20px;
+  }
+
+  /* Stack into single column */
+  .t-inner {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  /* On mobile: right comes first (title + subtext) */
+  .t-right {
+    order: -1;
+    padding-left: 0;
+    text-align: center;
+  }
+
+  .t-read-all {
+    justify-content: center;
+  }
+
+  /* Left section: remove relative positioning hacks */
+  .t-left {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  /* Photo full width */
+  .t-main-photo {
+    height: 320px;
+    object-fit: cover;
+  }
+
+  /* Hide floating cards on mobile */
+  .t-card-top,
+  .t-card-bottom {
+    display: none;
+  }
+
+  /* Mid card becomes stacked review list */
+  .t-card-mid {
+    margin-top: 0;
+  }
+
+  /* Show all 3 reviews stacked below image on mobile */
+  .t-mobile-reviews {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 24px;
+  }
+
+  .t-title {
+    font-size: clamp(1.8rem, 7vw, 2.6rem);
+    letter-spacing: -1px;
+  }
+
+  .t-blob-left,
+  .t-blob-bottom {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .t-title {
+    font-size: 2rem;
+  }
+}
+
+/* subtitle under title */
+.t-subtitle {
+  font-size: 0.9rem;
+  color: #666;
+  line-height: 1.7;
+  max-width: 400px;
+  margin-bottom: 16px;
+}
+
+/* desktop only — hide on mobile */
+.t-desktop-only {
+  display: block;
+}
+
+/* mobile reviews — hidden on desktop */
+.t-mobile-reviews {
+  display: none;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .t-desktop-only {
+    display: none !important;
+  }
+
+  .t-mobile-reviews {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 24px;
+    padding: 0 20px;
+  }
+
+  .t-subtitle {
+    max-width: 100%;
+    text-align: center;
+  }
+}

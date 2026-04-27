@@ -1,0 +1,206 @@
+/* ── SECTION ── */
+.cmp-section {
+  background: transparent;
+  padding: 40px 48px 80px;
+}
+
+/* ── INNER ── */
+.cmp-inner {
+  max-width: 1060px;
+  margin: 0 auto;
+  background: #2d4a1e;
+  border-radius: 28px;
+  padding: 60px 48px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* ── TITLE ── */
+.cmp-title {
+  font-size: clamp(2rem, 4.5vw, 3.2rem);
+  font-weight: 500;
+  color: #ffffff;
+  text-align: center;
+  line-height: 1.15;
+  letter-spacing: -1px;
+  margin-bottom: 32px;
+}
+
+/* ── DOWNLOAD BTN ── */
+/* Dark background so white Apple logo is clearly visible */
+.cmp-download {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: #3f632b;
+  color: #ffffff;
+  font-size: 0.95rem;
+  font-weight: 600;
+  padding: 14px 32px;
+  border-radius: 9999px;
+  text-decoration: none;
+  margin-bottom: 56px;
+  border: 2px solid rgba(255,255,255,0.15);
+  transition: background 0.2s ease;
+}
+
+.cmp-download:hover {
+  background: #2a3d1a;
+}
+
+.cmp-apple-img {
+  width: 18px;
+  height: 18px;
+  display: block;
+  flex-shrink: 0;
+  filter: brightness(0) invert(1); /* forces white */
+  transform: translateY(-1px);
+}
+
+/* ── TABLE ── */
+.cmp-table {
+  width: 100%;
+}
+
+/* ── THEAD ── */
+.cmp-thead {
+  display: grid;
+  grid-template-columns: 1fr 80px 80px 80px;
+  margin-bottom: 24px;
+  padding-bottom: 16px;
+}
+
+.cmp-thead-label { /* empty */ }
+
+.cmp-thead-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* App logos */
+.cmp-logo {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cmp-logo-olive {
+  background: #3a5530;
+}
+
+.cmp-logo-carrot {
+  background: #fff3e0;
+}
+
+.cmp-logo-b {
+  background: #f0f0f0;
+  border: 2px solid #ddd;
+}
+
+/* ── ROW ── */
+.cmp-row {
+  display: grid;
+  grid-template-columns: 1fr 80px 80px 80px;
+  align-items: center;
+  padding: 20px 0;
+  border-top: 1px solid rgba(255,255,255,0.15);
+}
+
+.cmp-row-label {
+  font-size: 0.92rem;
+  font-weight: 500;
+  color: #ffffff;
+}
+
+/* ── CELL ── */
+.cmp-cell {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cmp-check,
+.cmp-cross {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cmp-check { background: #8aaa5a; }
+.cmp-cross { background: #e05252; }
+
+/* ══════════════════════════════
+   RESPONSIVE
+══════════════════════════════ */
+@media (max-width: 768px) {
+  .cmp-section {
+    padding: 24px 12px 48px;
+  }
+
+  .cmp-inner {
+    padding: 40px 20px;
+    border-radius: 20px;
+    width: 100%;
+  }
+
+  .cmp-title {
+    font-size: clamp(1.6rem, 6vw, 2.4rem);
+  }
+
+  .cmp-thead {
+    grid-template-columns: 1fr 60px 60px 60px;
+  }
+
+  .cmp-row {
+    grid-template-columns: 1fr 60px 60px 60px;
+    padding: 16px 0;
+  }
+
+  .cmp-logo {
+    width: 40px;
+    height: 40px;
+  }
+
+  .cmp-check,
+  .cmp-cross {
+    width: 26px;
+    height: 26px;
+  }
+
+  .cmp-row-label {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .cmp-section {
+    padding: 16px 8px 40px;
+  }
+
+  .cmp-inner {
+    padding: 32px 16px;
+    border-radius: 16px;
+    width: 100%;
+  }
+
+  .cmp-thead {
+    grid-template-columns: 1fr 52px 52px 52px;
+  }
+
+  .cmp-row {
+    grid-template-columns: 1fr 52px 52px 52px;
+  }
+
+  .cmp-download {
+    font-size: 0.85rem;
+    padding: 12px 24px;
+  }
+}

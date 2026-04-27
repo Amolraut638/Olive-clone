@@ -1,0 +1,184 @@
+.fs-section {
+  width: 100%;
+  padding: 0 48px 80px;
+}
+
+.fs-card {
+  max-width: 1060px;
+  margin: 0 auto;
+  border-radius: 28px;
+  overflow: hidden;
+  position: relative;
+  min-height: 520px;
+  display: flex;
+  align-items: center;
+}
+
+/* ── BACKGROUND IMAGE ── */
+.fs-bg-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* ── DARK OVERLAY ── */
+.fs-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.72) 0%,
+    rgba(0, 0, 0, 0.45) 60%,
+    rgba(0, 0, 0, 0.15) 100%
+  );
+  z-index: 1;
+}
+
+/* ── DECORATIVE CIRCLES ── */
+.fs-circle {
+  position: absolute;
+  border-radius: 50%;
+  border: 1.5px solid rgba(255, 255, 255, 0.25);
+  z-index: 2;
+  pointer-events: none;
+}
+
+.fs-circle--tl {
+  width: 180px;
+  height: 180px;
+  top: -60px;
+  left: -60px;
+}
+
+.fs-circle--br {
+  width: 260px;
+  height: 260px;
+  bottom: -80px;
+  right: 80px;
+}
+
+/* ── CONTENT ── */
+.fs-content {
+  position: relative;
+  z-index: 3;
+  padding: 60px 56px;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  max-width: 560px;
+}
+
+/* ── TITLE ── */
+.fs-title {
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.15;
+  letter-spacing: -1px;
+}
+
+/* ── FEATURES ── */
+.fs-features {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.fs-features li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.fs-features li span {
+  font-size: 1rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.92);
+}
+
+.fs-check {
+  color: #fff;
+  background: #2d4a1e;
+  border-radius: 50%;
+  padding: 2px;
+  flex-shrink: 0;
+}
+
+/* ── BUTTON ── */
+.fs-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(255, 255, 255, 0.95);
+  color: #2d4a1e;
+  font-size: 0.95rem;
+  font-weight: 600;
+  padding: 14px 32px;
+  border-radius: 9999px;
+  width: fit-content;
+  transition: background 0.2s ease;
+  border: 2px solid transparent;
+}
+
+.fs-btn:hover {
+  background: #fff;
+  border-color: rgba(45, 74, 30, 0.2);
+}
+
+.fs-apple-icon {
+  filter: brightness(0) saturate(100%) invert(18%) sepia(40%) saturate(600%) hue-rotate(70deg);
+  flex-shrink: 0;
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 1024px) {
+  .fs-section {
+    padding: 0 32px 60px;
+  }
+
+  .fs-content {
+    padding: 48px 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .fs-section {
+    padding: 0 12px 48px;
+  }
+
+  .fs-card {
+    border-radius: 20px;
+    min-height: 480px;
+  }
+
+  .fs-content {
+    padding: 36px 24px;
+    gap: 22px;
+  }
+
+  .fs-title {
+    font-size: clamp(1.7rem, 7vw, 2.4rem);
+  }
+
+  .fs-features li span {
+    font-size: 0.92rem;
+  }
+
+  .fs-circle--tl {
+    width: 120px;
+    height: 120px;
+    top: -40px;
+    left: -40px;
+  }
+
+  .fs-circle--br {
+    width: 180px;
+    height: 180px;
+    bottom: -60px;
+    right: 40px;
+  }
+}
