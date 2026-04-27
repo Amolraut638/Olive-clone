@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "../styles/Navbar.css";
 import { ChevronDown, ArrowRight, Menu, X } from "lucide-react";
 
@@ -9,6 +9,14 @@ export default function Navbar() {
   const toggleDropdown = (name) => {
     setMobileDropdown(mobileDropdown === name ? null : name);
   };
+
+  useEffect(() => {
+    document.body.style.overflow = open ? "hidden" : "auto";
+
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, [open]);
 
   return (
     <nav className="navbar">

@@ -192,24 +192,30 @@
 .mobile-extra {
   display: none;
 }
-
 /* MOBILE VIEW */
 @media (max-width: 900px) {
 
   .mobile-toggle {
     display: block;
+    z-index: 200;
   }
 
   .nav-center {
-    position: absolute;
-    top: 70px;
+    position: fixed;            /* ✅ FIX: no overlap with hero */
+    top: 0;
     left: 0;
     width: 100%;
-    background: white;
+    height: 100vh;              /* ✅ full screen menu */
+    
+    background: #ffffff;
     flex-direction: column;
-    padding: 20px;
+    padding: 80px 20px 20px;    /* space for navbar top */
     gap: 16px;
+
     display: none;
+
+    overflow-y: auto;           /* ✅ SCROLLABLE MENU */
+    z-index: 150;
   }
 
   .nav-center.show {
@@ -220,10 +226,12 @@
     display: none;
   }
 
+  /* REMOVE DESKTOP DROPDOWN */
   .dropdown {
     display: none;
   }
 
+  /* MOBILE DROPDOWN */
   .mobile-dropdown {
     display: flex;
     flex-direction: column;
@@ -231,46 +239,50 @@
     background: #f9fbf9;
     padding: 14px;
     border-radius: 12px;
+    width: 100%;
   }
 
   .mobile-item {
-    padding: 8px;
+    padding: 10px;
     border-radius: 10px;
+    transition: 0.2s;
   }
 
   .mobile-item:hover {
     background: #eef4ec;
   }
 
-  .mobile-extra {
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    margin-top: 10px;
-  }
-
-  .mobile-extra .signin {
-    text-align: center;
-    width: 100%;
-    padding: 10px 0;
-    border-radius: 10px;
-    font-weight: 500;
-    transition: 0.2s;
-  }
-
-  .mobile-extra .signin:hover {
-    background: #eef4ec;  /* subtle hover like navbar */
-  }
-
-    .mobile-extra .btn {
-    width: 100%;
-    justify-content: center;
-  }
-
+  /* FOOD GRID */
   .mobile-food {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 10px;
+  }
+
+  /* SIGN IN + BUTTON */
+  .mobile-extra {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 20px;
+    width: 100%;
+  }
+
+  .mobile-extra .signin {
+    width: 100%;
+    text-align: center;
+    padding: 12px 0;
+    border-radius: 10px;
+    font-weight: 500;
+  }
+
+  .mobile-extra .signin:hover {
+    background: #eef4ec;
+  }
+
+  .mobile-extra .btn {
+    width: 100%;
+    justify-content: center;
   }
 }
