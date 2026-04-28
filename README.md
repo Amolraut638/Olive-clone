@@ -6,7 +6,7 @@
 
 ## Preview
 
-![Olive App Clone Preview](./preview.png)
+![Olive App Clone Preview](./image.png)
 
 ---
 
@@ -106,15 +106,15 @@ React was the natural choice for this project for several reasons:
 
 | | Link |
 |---|---|
-| 🚀 **Live Demo** | [View Deployed Site](https://olive-clone-hmi.vercel.app/) |
-| 💻 **GitHub Repo** | [https://github.com/Amolraut638/Olive-clone.git]() |
-| 📱 **Original Site** | [oliveapp.com](https://www.oliveapp.com/) |
+| **Live Demo** | [View Deployed Site](https://olive-clone-hmi.vercel.app/) |
+| **GitHub Repo** | [https://github.com/Amolraut638/Olive-clone.git]() |
+| **Original Site** | [oliveapp.com](https://www.oliveapp.com/) |
 
 > ⚠️ Note: This project is built purely for assessment purposes. All design credit goes to the Olive App team.
 
 ---
 
-## 📦 Getting Started
+## Getting Started
 
 ```bash
 # Clone the repository
