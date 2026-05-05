@@ -15,6 +15,10 @@ export default function HowItWorks() {
         { label: 'Yogurt', image: './product-4.webp' },
         { label: 'Bagels', image: './product-5.webp' },
         { label: 'Juice', image: './product-6.webp' },
+        { label: 'Juice', image: './product-7.webp' },
+        { label: 'Juice', image: './product-8.webp' },
+        { label: 'Juice', image: './product-9.webp' },
+        { label: 'Juice', image: './product-10.webp' },
     ]
 
     const marqueeWrapRef = useRef(null)  // ← added

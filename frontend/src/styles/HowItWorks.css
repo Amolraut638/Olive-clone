@@ -189,23 +189,25 @@
 .marquee-fade-right {
   position: absolute;
   top: 0; bottom: 0;
-  width: 60px;
+  width: 50px;
   z-index: 2;
   pointer-events: none;
 }
+
 .marquee-fade-left  { left: 0;  background: linear-gradient(to right, #eff7f1, transparent); }
 .marquee-fade-right { right: 0; background: linear-gradient(to left,  #eff7f1, transparent); }
 
 .marquee-track {
   display: flex;
-  gap: 10px;
+  gap: 12px;
   width: max-content;
-  animation: marqueeLeft 12s linear infinite;
+  animation: marqueeLeft 17s linear infinite;
+  will-change: transform;
 }
 
 @keyframes marqueeLeft {
-  0%   { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
 }
 
 .marquee-item {
@@ -214,9 +216,9 @@
   border-radius: 14px;
   flex-shrink: 0;
   overflow: hidden;
-  opacity: 0.35;
-  transform: scale(0.82);
-  transition: opacity 0.6s ease, transform 0.6s ease, box-shadow 0.6s ease;
+  opacity: 0.40;
+  transform: scale(0.85);
+  transition: all 0.4s ease;
 }
 
 .marquee-item img {
@@ -230,12 +232,8 @@
 .marquee-item--active {
   opacity: 1;
   transform: scale(1);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
-}
-
-/* pause marquee on hover */
-.marquee-track-wrap:hover .marquee-track {
-  animation-play-state: paused;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+  z-index: 3;
 }
 
 .safe-badge {
