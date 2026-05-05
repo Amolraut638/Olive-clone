@@ -11,7 +11,7 @@ const products = [
     score: 78,
     grade: "Good",
     gradeColor: "#e8a020",
-    image: "https://images.unsplash.com/photo-1566478989037-eec170784d0b?w=300&h=300&fit=crop",
+    image: "https://picsum.photos/id/292/300/300",
     insight: "These chips are made with organic corn and simple ingredients. A decent snack option, though the sodium content is worth watching if consumed frequently.",
     breakdown: [
       { label: "Seed Oils", value: "None", good: true },
@@ -27,7 +27,7 @@ const products = [
     score: 100,
     grade: "Excellent",
     gradeColor: "#27ae60",
-    image: "https://images.unsplash.com/photo-1625772299848-391b6a87d7b3?w=300&h=300&fit=crop",
+    image: "https://picsum.photos/id/433/300/300",
     insight: "This drink's high score is thanks to its simple and wholesome ingredients like strawberry juice and natural fibers, with no harmful additives.",
     breakdown: [
       { label: "Seed Oils", value: "None", good: true },
@@ -38,13 +38,13 @@ const products = [
   },
   {
     id: 3,
-    name: "Fig and Olive Crackers, Fig and Olive",
+    name: "Fig and Olive Crackers",
     brand: "Lesley Stowe",
     score: 46,
     grade: "Avoid",
     gradeColor: "#e74c3c",
-    image: "https://images.unsplash.com/photo-1558961363-fa8fdf82db35?w=300&h=300&fit=crop",
-    insight: "This product's low score mainly comes from processed sugars like honey and brown sugar, which can impact your family's health when consumed frequently.",
+    image: "https://picsum.photos/id/1080/300/300",
+    insight: "This product's low score mainly comes from processed sugars like honey and brown sugar, which can impact health when consumed frequently.",
     breakdown: [
       { label: "Seed Oils", value: "Present", good: false },
       { label: "Artificial Colors", value: "None", good: true },
@@ -54,13 +54,13 @@ const products = [
   },
   {
     id: 4,
-    name: "Organic Greek Yogurt, Plain Whole Milk",
+    name: "Organic Greek Yogurt",
     brand: "Stonyfield Farm",
     score: 88,
     grade: "Great",
     gradeColor: "#27ae60",
-    image: "https://images.unsplash.com/photo-1488477181946-6428a0291777?w=300&h=300&fit=crop",
-    insight: "Excellent choice! High in protein and probiotics with no artificial additives. Great for kids and adults alike as part of a balanced diet.",
+    image: "https://picsum.photos/id/1060/300/300",
+    insight: "High in protein and probiotics with no artificial additives. Great for a balanced diet.",
     breakdown: [
       { label: "Seed Oils", value: "None", good: true },
       { label: "Artificial Colors", value: "None", good: true },
@@ -75,8 +75,8 @@ const products = [
     score: 81,
     grade: "Great",
     gradeColor: "#27ae60",
-    image: "https://images.unsplash.com/photo-1604152135912-04a022e23696?w=300&h=300&fit=crop",
-    insight: "Made with simple, clean ingredients. High in healthy fats and protein. A solid staple for health-conscious families.",
+    image: "https://picsum.photos/id/292/300/300?random=1",
+    insight: "Made with simple ingredients. High in healthy fats and protein.",
     breakdown: [
       { label: "Seed Oils", value: "None", good: true },
       { label: "Artificial Colors", value: "None", good: true },
@@ -91,8 +91,8 @@ const products = [
     score: 62,
     grade: "Okay",
     gradeColor: "#e8a020",
-    image: "https://images.unsplash.com/photo-1621447504864-d8686e12698c?w=300&h=300&fit=crop",
-    insight: "Contains simple ingredients but the high sodium and seed oils bring the score down. Fine as an occasional treat but not ideal for daily snacking.",
+    image: "https://picsum.photos/id/1081/300/300",
+    insight: "Simple ingredients but high sodium and seed oils.",
     breakdown: [
       { label: "Seed Oils", value: "Present", good: false },
       { label: "Artificial Colors", value: "None", good: true },
@@ -100,7 +100,71 @@ const products = [
       { label: "Sodium", value: "High", good: false },
     ],
   },
-]
+  {
+    id: 7,
+    name: "Classic Hummus",
+    brand: "Sabra",
+    score: 72,
+    grade: "Good",
+    gradeColor: "#e8a020",
+    image: "https://picsum.photos/id/292/300/300?random=2",
+    insight: "A decent dip but contains added oils and sodium.",
+    breakdown: [
+      { label: "Seed Oils", value: "Present", good: false },
+      { label: "Artificial Colors", value: "None", good: true },
+      { label: "Added Sugar", value: "None", good: true },
+      { label: "Sodium", value: "Moderate", good: false },
+    ],
+  },
+  {
+    id: 8,
+    name: "Oats & Honey Granola Bars",
+    brand: "Nature Valley",
+    score: 58,
+    grade: "Okay",
+    gradeColor: "#e8a020",
+    image: "https://picsum.photos/id/102/300/300",
+    insight: "Convenient snack but contains added sugars.",
+    breakdown: [
+      { label: "Seed Oils", value: "Present", good: false },
+      { label: "Artificial Colors", value: "None", good: true },
+      { label: "Added Sugar", value: "High", good: false },
+      { label: "Preservatives", value: "Present", good: false },
+    ],
+  },
+  {
+    id: 9,
+    name: "Organic Apple Juice",
+    brand: "Tree Top",
+    score: 75,
+    grade: "Good",
+    gradeColor: "#e8a020",
+    image: "https://picsum.photos/id/1084/300/300",
+    insight: "No artificial additives but naturally high sugar.",
+    breakdown: [
+      { label: "Seed Oils", value: "None", good: true },
+      { label: "Artificial Colors", value: "None", good: true },
+      { label: "Added Sugar", value: "None", good: true },
+      { label: "Sugar Content", value: "High", good: false },
+    ],
+  },
+  {
+    id: 10,
+    name: "Whole Wheat Bread",
+    brand: "Arnold",
+    score: 70,
+    grade: "Good",
+    gradeColor: "#e8a020",
+    image: "https://picsum.photos/id/431/300/300",
+    insight: "Contains fiber but also preservatives.",
+    breakdown: [
+      { label: "Seed Oils", value: "Present", good: false },
+      { label: "Artificial Colors", value: "None", good: true },
+      { label: "Added Sugar", value: "Low", good: true },
+      { label: "Preservatives", value: "Present", good: false },
+    ],
+  },
+];
 
 const avatars = [
   "https://i.pravatar.cc/40?img=1",
@@ -123,7 +187,7 @@ export default function Hero() {
   }, [])
 
   const trackOffset = () => {
-    if (!trackRef.current) return 0
+    if (!trackRef.current || !trackRef.current.parentElement) return 0
     const containerWidth = trackRef.current.parentElement.offsetWidth
     return containerWidth / 2 - activeIndex * ITEM_WIDTH - 50
   }
