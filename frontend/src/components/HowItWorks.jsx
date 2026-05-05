@@ -77,7 +77,7 @@ export default function HowItWorks() {
 
                         <div className="scan-product">
                             <img
-                                src="./barcode-image.webp"
+                                src="./orangeQr.png"
                                 alt="product"
                                 className="scan-avocado"
                             />
